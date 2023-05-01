@@ -26,7 +26,7 @@ def rotate(img, angle):
 
 def stitch(src_images):
     num_imgs = len(src_images)
-    stitcher = cv2.createStitcher()
+    stitcher = cv2.Stitcher_create()
     stitched = []
     for i, image in enumerate(src_images, 1):
         rotated_img = rotate(image, 90)

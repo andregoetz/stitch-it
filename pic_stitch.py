@@ -1,6 +1,5 @@
 import cv2
 import argparse
-import sys
 from utils import stitch
 
 ap = argparse.ArgumentParser()
@@ -19,5 +18,5 @@ for i, image_path in enumerate(image_paths, 1):
 stitched = stitch(images)
 
 output_filename = args["output"]
-cv2.imwrite(output_filename, stitched)
 
+cv2.imwrite(output_filename, stitched)

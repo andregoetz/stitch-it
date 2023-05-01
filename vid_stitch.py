@@ -1,6 +1,5 @@
 import cv2
 import argparse
-import sys
 from utils import stitch, extract_frames
 
 ap = argparse.ArgumentParser()
@@ -20,6 +19,7 @@ frame_param = args["frame_param"]
 output_filename = args["output"]
 
 images = extract_frames(video_path, frame_param_type, frame_param)
+
 stitched = stitch(images)
 
 cv2.imwrite(output_filename, stitched)
